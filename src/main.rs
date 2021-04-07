@@ -21,11 +21,10 @@ fn main() {
                             println!("Your guess is too low!");
                         } else if guess > number {
                             println!("Your guess is too high!");
-                        } else if guess == number {
+                        } else {
                             println!("Yes! You are correct! Number was {}!", guess);
-                            return;
+                            break;
                         }
-                        continue;
                     },
                     Err(e) => {
                         println!("Could not read your input. {}. Try again!", e);
